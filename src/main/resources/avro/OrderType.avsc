@@ -1,0 +1,24 @@
+{
+  "namespace": "ru.sample",
+  "type": "record",
+  "name": "OrderType",
+  "version": "1",
+  "doc": "Type documentation",
+  "fields": [
+    {
+      "name": "type",
+      "type": [
+        "null",
+        {
+          "type": "enum",
+          "name": "OrderTypeSuit",
+          "symbols": [
+            "CALL",
+            "PUT"
+          ]
+        }
+      ],
+      "doc": "Field documentation"
+    }
+  ]
+}

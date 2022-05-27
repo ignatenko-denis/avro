@@ -1,0 +1,116 @@
+{
+  "namespace": "ru.sample",
+  "type": "record",
+  "name": "Order",
+  "version": "1",
+  "doc": "Type documentation",
+  "fields": [
+    {
+      "name": "id",
+      "type": [
+        "null",
+        "long"
+      ],
+      "doc": "Field documentation"
+    },
+    {
+      "name": "orderType",
+      "type": [
+        "null",
+        "ru.sample.OrderType"
+      ],
+      "doc": "Field documentation"
+    },
+    {
+      "name": "comment",
+      "type": [
+        "null",
+        "string"
+      ],
+      "doc": "Field documentation"
+    },
+    {
+      "name": "date",
+      "type": [
+        "null",
+        {
+          "type": "int",
+          "logicalType": "date"
+        }
+      ],
+      "doc": "Field documentation"
+    },
+    {
+      "name": "time",
+      "type": [
+        "null",
+        {
+          "type": "long",
+          "logicalType": "time-micros"
+        }
+      ],
+      "doc": "Field documentation"
+    },
+    {
+      "name": "number",
+      "type": [
+        "null",
+        "int"
+      ],
+      "doc": "Field documentation"
+    },
+    {
+      "name": "direction",
+      "type": [
+        "null",
+        {
+          "type": "enum",
+          "name": "DirectionSuit",
+          "symbols": [
+            "BUY",
+            "SALE"
+          ]
+        }
+      ],
+      "doc": "Field documentation"
+    },
+    {
+      "name": "price",
+      "type": [
+        "null",
+        {
+          "type": "string",
+          "java-class": "java.math.BigDecimal"
+        }
+      ],
+      "doc": "Field documentation"
+    },
+    {
+      "name": "options",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": {
+            "name": "Option",
+            "type": "record",
+            "fields": [
+              {
+                "name": "key",
+                "type": "string",
+                "doc": "Field documentation"
+              },
+              {
+                "name": "name",
+                "type": "string",
+                "doc": "Field documentation"
+              }
+            ]
+          },
+          "default": []
+        }
+      ],
+      "doc": "Field documentation"
+    }
+  ]
+}
